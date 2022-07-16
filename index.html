@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="PWA Workshop" />
+    <meta name="apple-mobile-web-app-title" content="PWA Workshop" />
+    <meta name="msapplication-starturl" content="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>PWA Workshop</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="manifest" href="manifest.json"> -->
+  </head>
+
+  <body
+    class="w-full h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+  >
+    <h1 class="text-2xl text-white p-3">Weclome to PWA</h1>
+
+    <div class="flex justify-center space-x-4 items-center">
+      <input
+        id="city"
+        class="border-2 md:w-5/12 p-3 border-gray-300 rounded-full"
+        type="text"
+        placeholder="Enter Location"
+      />
+      <button
+        id="search"
+        class="px-5 py-2 rounded-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+      >
+        Search
+      </button>
+    </div>
+
+    <div id="card" class="card px-10 md:flex  w-full justify-center mt-8">
+      <div
+        class="block p-6 mx-auto md:w-4/12 text-center bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      >
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          <span id="location">City</span>
+          <span
+            ><sup
+              id="country"
+              class="rounded-full p-1 text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+              >CN</sup
+            ></span
+          >
+        </h5>
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white mt-5"
+        >
+          <span id="temp"></span> <span><sup>&deg;C</sup></span>
+        </h5>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+    <script src="nawhogopay.js"></script>
+    <script>
+      // if ("serviceWorker" in navigator) {
+      //   window.addEventListener("load", () => {
+      //     navigator.serviceWorker
+      //       .register("/serviceworker.js") // returns a promise
+      //       .then((reg) => {
+      //           console.log('PWA service worker ready');
+      //           reg.update();
+      //       })
+      //       .catch((e) => console.log(e));
+      //   });
+
+      //    // Check user internet status (online/offline)
+      //    function updateOnlineStatus(event) {
+      //       if (!navigator.onLine) {
+      //           alert('Internet access is not possible!')
+      //       }
+      //   }
+
+      //   window.addEventListener('online', updateOnlineStatus);
+      //   window.addEventListener('offline', updateOnlineStatus);
+      // }
+    </script>
+  </body>
+</html>
